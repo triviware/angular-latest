@@ -15,9 +15,9 @@ Migración a Jest:
 
 npm uninstall @types/jasmine jasmine-core karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
 
-2. Añadir dependencias jest
+2. Añadir dependencias jest y ts-node
 
-npm install @types/jest jest jest-preset-angular --save-dev
+npm install @types/jest jest jest-preset-angular ts-node --save-dev
 
 3. Borrar el nodo "test" del angular.json
 
@@ -79,3 +79,6 @@ describe('AppComponent', () => {
   });
 });
 
+8. Modificar/añadir los scripts npm en el package.json:
+"test": "jest --transformIgnorePatterns \"node_modules/(?!@toolz/allow)/\" --env=jsdom --verbose",
+"test:watch": "jest --transformIgnorePatterns \"node_modules/(?!@toolz/allow)/\" --env=jsdom --watch"
