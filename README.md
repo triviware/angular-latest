@@ -54,7 +54,7 @@ Además descomentamos y cambiamos el valor de estas propiedades:
   ]
 }
 
-7. Adaptar el fichero app.component.spec.ts para que el test sea compatible con standalone
+7. Adaptar los ficheros *.spec.ts para que los tests sean compatibles con standalone (si es que la aplicación es standalone, obviamente)
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
